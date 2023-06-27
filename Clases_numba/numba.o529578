@@ -1,0 +1,5 @@
+Allocated GPU(s) with id(s):  1
+Setting CUDA_VISIBLE_DEVICES=1
+Setting NV_GPU=1
+/opt/gridengine/default/spool/compute-6-10/job_scripts/529578: line 29: conda: command not found
+DeviceID: 1

@@ -1,0 +1,4 @@
+Allocated GPU(s) with id(s):  0
+Setting CUDA_VISIBLE_DEVICES=0
+Setting NV_GPU=0
+/opt/gridengine/default/spool/compute-6-2/job_scripts/525753: line 28: ./multmat: No such file or directory

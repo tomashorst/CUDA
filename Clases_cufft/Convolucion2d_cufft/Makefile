@@ -1,0 +1,16 @@
+APPS=convolucion2d_cufft
+
+FLAGS=-DPRINTCONVOLUTION -DPRINTSTRUCTUREFACTOR -DLAPLACIAN #-DFILTER #-DRANDOM # -DPRINTSTRUCTUREFACTOR -DCUADRADO -DFILTER 
+
+all: ${APPS}
+
+%: %.cu
+	nvcc -O2 -lcufft $(FLAGS) -I/share/apps/icnpg/common/ -o $@ $< 
+clean:
+	rm -f ${APPS}
+
+run:	all
+	./convolucion2d_cufft
+
+submit:	all
+	qsub jobGPU; watch qstat

@@ -1,0 +1,6 @@
+mkdir: cannot create directory ‘/tmp/lock-gpu1’: File exists
+Allocated GPU(s) with id(s):  0
+Setting CUDA_VISIBLE_DEVICES=0
+Setting NV_GPU=0
+CPU: N= 10000000 t= 71.886538 ms
+VectorAdd<<< 39063, 256 >>>, N= 10000000 t= 0.450752 ms

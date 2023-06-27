@@ -1,0 +1,5 @@
+Allocated GPU(s) with id(s):  1
+Setting CUDA_VISIBLE_DEVICES=1
+Setting NV_GPU=1
+final result 1=10000 en ms=0.000651
+final result 2=10000 en ms=0.001409

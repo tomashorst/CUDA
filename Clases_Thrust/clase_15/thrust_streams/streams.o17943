@@ -1,0 +1,5 @@
+Allocated GPU(s) with id(s):  1
+Setting CUDA_VISIBLE_DEVICES=1
+Setting NV_GPU=1
+==3766== NVPROF is profiling process 3766, command: ./ejecutable
+==3766== Generated result file: /home/koltona/icnpg2019/icnpg/Clases/Clases_Thrust/clase_15/thrust_streams/ejecutable.prof

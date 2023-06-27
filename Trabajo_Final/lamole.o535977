@@ -1,0 +1,46 @@
+Allocated GPU(s) with id(s):  0
+Setting CUDA_VISIBLE_DEVICES=0
+Setting NV_GPU=0
+DeviceID: 0
+DeviceID: 0
+num_threads_per_block:  1024
+num_blocks:  1000000
+Traceback (most recent call last):
+  File "/share/apps/miniconda3/envs/rapids-23.04/lib/python3.10/site-packages/numba/cuda/cudadrv/driver.py", line 840, in _attempt_allocation
+    return allocator()
+  File "/share/apps/miniconda3/envs/rapids-23.04/lib/python3.10/site-packages/numba/cuda/cudadrv/driver.py", line 1051, in allocator
+    driver.cuMemAlloc(byref(ptr), size)
+  File "/share/apps/miniconda3/envs/rapids-23.04/lib/python3.10/site-packages/numba/cuda/cudadrv/driver.py", line 320, in safe_cuda_api_call
+    self._check_ctypes_error(fname, retcode)
+  File "/share/apps/miniconda3/envs/rapids-23.04/lib/python3.10/site-packages/numba/cuda/cudadrv/driver.py", line 388, in _check_ctypes_error
+    raise CudaAPIError(retcode, msg)
+numba.cuda.cudadrv.driver.CudaAPIError: [2] Call to cuMemAlloc results in CUDA_ERROR_OUT_OF_MEMORY
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/raul.horst/Trabajo_Final/lamole.py", line 72, in <module>
+    generate_combinations(target_vector, n, characters)
+  File "/home/raul.horst/Trabajo_Final/lamole.py", line 51, in generate_combinations
+    rng_states = create_xoroshiro128p_states( num_threads_per_block * num_blocks, seed=1)
+  File "/share/apps/miniconda3/envs/rapids-23.04/lib/python3.10/site-packages/numba/cuda/random.py", line 289, in create_xoroshiro128p_states
+    states = cuda.device_array(n, dtype=xoroshiro128p_dtype, stream=stream)
+  File "/share/apps/miniconda3/envs/rapids-23.04/lib/python3.10/site-packages/numba/cuda/cudadrv/devices.py", line 232, in _require_cuda_context
+    return fn(*args, **kws)
+  File "/share/apps/miniconda3/envs/rapids-23.04/lib/python3.10/site-packages/numba/cuda/api.py", line 136, in device_array
+    return devicearray.DeviceNDArray(shape=shape, strides=strides, dtype=dtype,
+  File "/share/apps/miniconda3/envs/rapids-23.04/lib/python3.10/site-packages/numba/cuda/cudadrv/devicearray.py", line 103, in __init__
+    gpu_data = devices.get_context().memalloc(self.alloc_size)
+  File "/share/apps/miniconda3/envs/rapids-23.04/lib/python3.10/site-packages/numba/cuda/cudadrv/driver.py", line 1361, in memalloc
+    return self.memory_manager.memalloc(bytesize)
+  File "/share/apps/miniconda3/envs/rapids-23.04/lib/python3.10/site-packages/numba/cuda/cudadrv/driver.py", line 1053, in memalloc
+    self._attempt_allocation(allocator)
+  File "/share/apps/miniconda3/envs/rapids-23.04/lib/python3.10/site-packages/numba/cuda/cudadrv/driver.py", line 852, in _attempt_allocation
+    return allocator()
+  File "/share/apps/miniconda3/envs/rapids-23.04/lib/python3.10/site-packages/numba/cuda/cudadrv/driver.py", line 1051, in allocator
+    driver.cuMemAlloc(byref(ptr), size)
+  File "/share/apps/miniconda3/envs/rapids-23.04/lib/python3.10/site-packages/numba/cuda/cudadrv/driver.py", line 320, in safe_cuda_api_call
+    self._check_ctypes_error(fname, retcode)
+  File "/share/apps/miniconda3/envs/rapids-23.04/lib/python3.10/site-packages/numba/cuda/cudadrv/driver.py", line 388, in _check_ctypes_error
+    raise CudaAPIError(retcode, msg)
+numba.cuda.cudadrv.driver.CudaAPIError: [2] Call to cuMemAlloc results in CUDA_ERROR_OUT_OF_MEMORY

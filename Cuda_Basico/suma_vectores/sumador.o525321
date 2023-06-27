@@ -1,0 +1,7 @@
+Allocated GPU(s) with id(s):  1
+Setting CUDA_VISIBLE_DEVICES=1
+Setting NV_GPU=1
+CPU: N= 10000 t= 0.076540 ms
+gpu.out: 4_suma_vectores_gpu_general.cu:74: int main(int, char**): Assertion `c[i]==2*i' failed.
+VectorAdd<<< 40, 256 >>>, N= 10000 t= 0.005664 ms
+/opt/gridengine/default/spool/compute-6-2/job_scripts/525321: line 34: 28127 Aborted                 (core dumped) ./gpu.out $1

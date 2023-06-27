@@ -1,0 +1,13 @@
+#$ -cwd
+#$ -j y
+#$ -S /bin/bash
+#$ -q gpushort
+#$ -l gpu=1
+#$ -l memoria_a_usar=1G
+#$ -N Grillas
+#
+#cargar variables de entorno para encontrar cosas...
+
+#ejecutar el o los binarios con sus respectivos argumentos
+./grillas
+

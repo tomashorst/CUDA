@@ -1,0 +1,8 @@
+Allocated GPU(s) with id(s):  1
+Setting CUDA_VISIBLE_DEVICES=1
+Setting NV_GPU=1
+DeviceID: 1
+Traceback (most recent call last):
+  File "epidemia_numba.py", line 4, in <module>
+    from numba import cuda
+ModuleNotFoundError: No module named 'numba'

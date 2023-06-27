@@ -1,0 +1,6 @@
+mkdir: cannot create directory ‘/tmp/lock-gpu0’: File exists
+ERROR: Only reserved 0 of 1 requested devices.
+mkdir: cannot create directory ‘/tmp/lock-gpu0’: File exists
+ERROR: Only reserved 0 of 1 requested devices.
+mkdir: cannot create directory ‘/tmp/lock-gpu0’: File exists
+ERROR: Only reserved 0 of 1 requested devices.

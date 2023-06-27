@@ -1,0 +1,32 @@
+mkdir: cannot create directory ‘/tmp/lock-gpu1’: File exists
+Allocated GPU(s) with id(s):  0
+Setting CUDA_VISIBLE_DEVICES=0
+Setting NV_GPU=0
+==8938== NVPROF is profiling process 8938, command: ./saxpy
+5.000000
+5.000000
+5.000000
+5.000000
+==8938== Profiling application: ./saxpy
+==8938== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   40.45%  8.0640us         8  1.0080us     960ns  1.2480us  [CUDA memcpy HtoD]
+                   26.48%  5.2800us         4  1.3200us  1.2160us  1.4400us  [CUDA memcpy DtoH]
+                   22.63%  4.5120us         2  2.2560us  1.4400us  3.0720us  void thrust::cuda_cub::core::_kernel_agent<thrust::cuda_cub::__parallel_for::ParallelForAgent<thrust::cuda_cub::__uninitialized_fill::functor<thrust::device_ptr<float>, float>, unsigned long>, thrust::cuda_cub::__uninitialized_fill::functor<thrust::device_ptr<float>, float>, unsigned long>(thrust::device_ptr<float>, float)
+                   10.44%  2.0810us         1  2.0810us  2.0810us  2.0810us  void thrust::cuda_cub::core::_kernel_agent<thrust::cuda_cub::__parallel_for::ParallelForAgent<thrust::cuda_cub::__transform::binary_transform_f<thrust::detail::normal_iterator<thrust::device_ptr<float>>, thrust::detail::normal_iterator<thrust::device_ptr<float>>, thrust::detail::normal_iterator<thrust::device_ptr<float>>, thrust::cuda_cub::__transform::no_stencil_tag, thrust::detail::functional::actor<thrust::detail::functional::composite<thrust::detail::functional::binary_operator<thrust::plus>, thrust::detail::functional::actor<thrust::detail::functional::composite<thrust::detail::functional::binary_operator<thrust::multiplies>, thrust::detail::functional::value<float>, thrust::detail::functional::actor<thrust::detail::functional::argument<unsigned int=0>>, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type>>, thrust::detail::functional::actor<thrust::detail::functional::argument<unsigned int=1>>, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type>>, thrust::cuda_cub::__transform::always_true_predicate>, long>, thrust::cuda_cub::__transform::binary_transform_f<thrust::detail::normal_iterator<thrust::device_ptr<float>>, thrust::detail::normal_iterator<thrust::device_ptr<float>>, thrust::detail::normal_iterator<thrust::device_ptr<float>>, thrust::cuda_cub::__transform::no_stencil_tag, thrust::detail::functional::actor<thrust::detail::functional::composite<thrust::detail::functional::binary_operator<thrust::plus>, thrust::detail::functional::actor<thrust::detail::functional::composite<thrust::detail::functional::binary_operator<thrust::multiplies>, thrust::detail::functional::value<float>, thrust::detail::functional::actor<thrust::detail::functional::argument<unsigned int=0>>, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type>>, thrust::detail::functional::actor<thrust::detail::functional::argument<unsigned int=1>>, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type, thrust::null_type>>, thrust::cuda_cub::__transform::always_true_predicate>, long>(thrust::device_ptr<float>, thrust::detail::normal_iterator<thrust::device_ptr<float>>)
+      API calls:   99.51%  236.76ms         2  118.38ms  6.8140us  236.76ms  cudaMalloc
+                    0.20%  483.58us         1  483.58us  483.58us  483.58us  cuDeviceTotalMem
+                    0.09%  224.47us        96  2.3380us     200ns  96.164us  cuDeviceGetAttribute
+                    0.06%  131.69us         2  65.843us  14.398us  117.29us  cudaFree
+                    0.05%  114.78us        12  9.5650us  4.2880us  20.744us  cudaMemcpyAsync
+                    0.03%  74.071us         3  24.690us  9.9480us  52.889us  cudaLaunchKernel
+                    0.02%  59.094us        12  4.9240us  1.7080us  9.6720us  cudaStreamSynchronize
+                    0.02%  37.862us         1  37.862us  37.862us  37.862us  cuDeviceGetName
+                    0.01%  17.810us         3  5.9360us  3.1080us  11.472us  cudaFuncGetAttributes
+                    0.01%  13.457us         1  13.457us  13.457us  13.457us  cuDeviceGetPCIBusId
+                    0.00%  3.7720us         3  1.2570us     564ns  2.5850us  cudaGetDevice
+                    0.00%  2.9690us         2  1.4840us     204ns  2.7650us  cuDeviceGet
+                    0.00%  2.7860us         3     928ns     600ns  1.5490us  cudaDeviceGetAttribute
+                    0.00%  1.8130us         3     604ns     234ns  1.1810us  cuDeviceGetCount
+                    0.00%  1.7430us         6     290ns     210ns     559ns  cudaPeekAtLastError
+                    0.00%     280ns         1     280ns     280ns     280ns  cuDeviceGetUuid

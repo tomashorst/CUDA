@@ -1,0 +1,10 @@
+Para compilar
+// nvcc -o conv2d convolucion2d_cufft.cu -lcufft -DLAPLACIAN -DPRINTCONVOLUTION
+
+Para chequear graficamente
+	// por ejemplo chequear:
+	// Si el input es cos(2*pi*x/64)*cos(y*pi*2/64) con x=0,...,NX e y=0,...,NY
+	// gnuplot> NX=64;NY=64; 
+	// splot "convolution.dat" matrix pt 0 w pm3d, -((2*pi/NX)**2+(2*pi/NY)**2)*cos(2*pi*x/NX)*cos(y*pi*2/NY)
+	// NX=64;NY=64; splot "input.dat" matrix pt 0 w pm3d, cos(2*pi*x/NX)*cos(y*pi*2/NY)
+

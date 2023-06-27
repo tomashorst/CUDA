@@ -1,0 +1,6 @@
+Allocated GPU(s) with id(s):  0
+Setting CUDA_VISIBLE_DEVICES=0
+Setting NV_GPU=0
+
+Device 0: "GeForce GTX 780"
+maximo de los 10000000 numeros =0.250000, ms=1.616832

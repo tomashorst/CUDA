@@ -1,0 +1,9 @@
+Allocated GPU(s) with id(s):  1
+Setting CUDA_VISIBLE_DEVICES=1
+Setting NV_GPU=1
+/opt/gridengine/default/spool/compute-6-10/job_scripts/529583: line 29: conda: command not found
+DeviceID: 1
+Traceback (most recent call last):
+  File "epidemia_numba.py", line 3, in <module>
+    import numpy as np
+ImportError: No module named numpy

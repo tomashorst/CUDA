@@ -1,0 +1,17 @@
+APPS=reduce normaliza normaliza2 normaliza3 normaliza4 normaliza5 ompvsgpu saxpy suma transforma
+
+all: ${APPS}
+
+%: %.cu
+	nvcc -O2 -o $@ $<
+
+clean:
+	rm -f ${APPS}
+
+run:	all
+	./ejecutable
+
+submit:	all
+	qsub jobGPU; watch qstat
+
+

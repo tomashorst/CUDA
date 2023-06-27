@@ -1,0 +1,4 @@
+Allocated GPU(s) with id(s):  1
+Setting CUDA_VISIBLE_DEVICES=1
+Setting NV_GPU=1
+/opt/gridengine/default/spool/compute-6-2/job_scripts/526658: line 33: ./saxpy: No such file or directory

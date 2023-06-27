@@ -1,0 +1,4 @@
+#para generar un mpeg a partir de todos los ppm que genera este programa
+#https://askubuntu.com/questions/971119/convert-a-sequence-of-ppm-images-to-avi-video
+
+ffmpeg -pattern_type glob -framerate 25 -i "*.ppm" output

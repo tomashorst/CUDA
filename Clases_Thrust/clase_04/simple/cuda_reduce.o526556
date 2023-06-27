@@ -1,0 +1,5 @@
+mkdir: cannot create directory ‘/tmp/lock-gpu0’: File exists
+Allocated GPU(s) with id(s):  1
+Setting CUDA_VISIBLE_DEVICES=1
+Setting NV_GPU=1
+ejecutable:./cuda_reduce suma=10738137647022080.000000 en 0.627558 ms
